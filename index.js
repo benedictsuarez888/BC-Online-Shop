@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const morgan = require(morgan);
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const connection = mysql.createConnection({
@@ -8,15 +9,11 @@ const connection = mysql.createConnection({
   password : 'root',
   database : 'bc'
 });
+const port = 8000;
 
-// Start of MySQL Connection sample
-connection.connect();
+app.use(morgan('dev'));
 
-connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-  if (err) throw err
-
-  console.log('The solution is: ', rows[0].solution)
+app.listen(port, (err) => {
+  if(err) { return console.error(err); }
+  console.log(`Listening to ${port}...`);
 });
-
-connection.end();
-// End of MySQL Connection sample
