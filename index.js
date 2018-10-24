@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const connection = mysql.createConnection({
