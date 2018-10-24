@@ -1,0 +1,25 @@
+{
+  "name": "bc-online-shop",
+  "version": "1.0.0",
+  "description": "An online shop made from Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benedictsuarez888/BC-Online-Shop.git"
+  },
+  "author": "Benedict Suarez, Christian Jaede Samboa, Jefferwin Gonong, Joshua Soriano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benedictsuarez888/BC-Online-Shop/issues"
+  },
+  "homepage": "https://github.com/benedictsuarez888/BC-Online-Shop#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0",
+    "mysql": "^2.16.0"
+  }
+}
