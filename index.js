@@ -3,8 +3,9 @@ const app = express();
 const morgan = require('morgan');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const path = require('path');
 const indexRouter = require('./server/routers/indexRouter');
-const notesRouter = require('./server/routers/productsRouter');
+const productsRouter = require('./server/routers/productsRouter');
 const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
