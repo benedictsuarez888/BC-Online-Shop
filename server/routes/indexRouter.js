@@ -1,7 +1,15 @@
+/**
+ * indexRouter
+ */
 const express = require('express');
-const app = express();
 const router = express.Router();
-// const mysql = require('mysql');
 
+// router.get('/', function(req, res) {
+//     res.send('hello world');
+// });
+
+router.get('/', function getIndexPage(req, res) {
+    res.render('index.pug');
+})
 
 module.exports = router;
