@@ -24,11 +24,18 @@
                 var self = this;
                 var payload = {
                     product_name: self.product_name,
-                    product_description: self.product_name,
+                    product_description: self.product_description,
                     product_price: self.product_price,
                     product_quantity: self.product_quantity,
                     product_category: self.product_category,
-                }
+                };
+                axios.post('/api/products', payload)
+                    .then(function(res) {
+                        self.products = res.data;
+                        self.clear();
+                    })
+                    .catch(function(err) {
+                    });
             },
             clear: function() {
                 this.product_name = null;

@@ -18,6 +18,7 @@ const productsRouter = require('./server/routes/productsRouter');
 const port = 8000;
 
 app.use(myConnection(mysql, dbOptions, 'pool'));
+
 app.use(morgan('dev'));
 
 app.use(bodyParser.urlencoded({ extended: true }))

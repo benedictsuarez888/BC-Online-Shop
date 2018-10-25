@@ -36,7 +36,7 @@
             product_quantity: quantityInput.value,
             product_category: categoryInput.value
         };
-        axios.post('http://localhost:3300/api/products', payload)
+        axios.post('http://localhost:8000/api/products', payload)
             .then(function(res) {
                 products = res.data;
                 renderProducts(products);

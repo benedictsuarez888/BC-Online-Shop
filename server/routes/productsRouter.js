@@ -1,8 +1,11 @@
-//api routes
+/**
+ * Products API Routes
+ */
 
 const express = require('express');
 const router = express.Router();
 
+// PUll all the product
 router.get('/', (req, res, next) => {
     next();
 }, (req, res) => {
