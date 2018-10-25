@@ -10,4 +10,4 @@ An Online Shop application made from Node.js.
 5. Go inside the folder of the project.
 6. Run "node index.js".
 
-Take note that node_modules folder is not included in the repository. After you clone, you need to install these node packages: express, body-parser, mysql or copy, paste and run this command "npm install --save express body-parser mysql" without the quotation marks.
+Take note that node_modules folder is not included in the repository. After you clone, you need to install these node packages: express, body-parser, mysql or copy, paste and run this command "npm install --save express body-parser mysql morgan" without the quotation marks.
