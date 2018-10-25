@@ -31,13 +31,23 @@ router.get('/:id', (req, res) => {
 });
 
 // Add a product
-var product = {
-    
-}
 router.post('/', (req, res) => {
-    req.getConnection(function(error, conn) {
-        conn.query('INSERT INTO users SET ?', user, function(err, result) {
+    const product = {
+        product_name: req.body.product_name,
+        product_description: req.body.product_description,
+        product_price: req.body.product_price,
+        product_quantity: req.body.product_quantity,
+        product_category: req.body.product_category
+    }
 
+    req.getConnection(function(error, conn) {
+        conn.query('INSERT INTO products SET ?', product, function(err, result) {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log(`Successfully added!`);
+                res.json(product)
+            }
         })
     })
 });
