@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 
 // Add a product
 router.post('/', (req, res) => {
-    const product = {
+    var product = {
         product_name: req.body.product_name,
         product_description: req.body.product_description,
         product_price: req.body.product_price,
@@ -45,8 +45,8 @@ router.post('/', (req, res) => {
             if(err) {
                 console.log(err);
             } else {
-                console.log(`Successfully added!`);
-                res.json(product)
+                console.log(`Added successfully!`);
+                res.json(product);
             }
         })
     })
@@ -54,12 +54,42 @@ router.post('/', (req, res) => {
 
 // Edit a product
 router.put('/:id', (req, res) => {
-    //SQL Query
+    var product = {
+        product_name: req.body.product_name,
+        product_description: req.body.product_description,
+        product_price: req.body.product_price,
+        product_quantity: req.body.product_quantity,
+        product_category: req.body.product_category
+    }
+    req.getConnection(function(error, conn) {
+        conn.query('UPDATE products SET ? WHERE product_id = ' + req.params.id, product, function(err, result) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(`Updated successfully!`);
+                res.json(product);
+            }
+        })
+    })
 });
 
 // Delete a product
 router.delete('/:id', (req, res) => {
-    //SQL Query
+    req.getConnection(function(error, conn) {
+        conn.query('DELETE from products WHERE product_id = ' + req.params.id, function(err, result) {
+            if(err) {
+                console.log(err);
+            } else {
+                conn.query('SELECT * FROM products', function(err, rows, fields){
+                    if(err) {
+                        console.log(err);
+                    } else {
+                        res.send(rows);
+                    }
+                })
+            }
+        })
+    })
 });
 
 module.exports = router;
