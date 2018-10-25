@@ -1,16 +1,33 @@
+//api routes
+
 const express = require('express');
 const router = express.Router();
 
-// Shows the list of all products
 router.get('/', (req, res, next) => {
     next();
 }, (req, res) => {
-    // SQL Query
+    req.getConnection(function(error, conn) {
+        conn.query('SELECT * FROM products', function(err, rows, fields){
+            if(err) {
+                console.log(err);
+            } else {
+                res.send(rows);
+            }
+        })
+    })
 });
 
 // Pull the information of the specific product
 router.get('/:id', (req, res) => {
-    //SQL Query
+    req.getConnection(function(error, conn) {
+        conn.query('SELECT * FROM products WHERE product_id = ' + req.params.id, function(err, rows, fields) {
+            if(err) {
+                console.log(err);
+            } else {
+                res.send(rows);
+            }
+        })
+    })
 });
 
 // Add a product
