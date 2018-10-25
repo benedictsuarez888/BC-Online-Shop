@@ -31,8 +31,15 @@ router.get('/:id', (req, res) => {
 });
 
 // Add a product
+var product = {
+    
+}
 router.post('/', (req, res) => {
-    //SQL Query
+    req.getConnection(function(error, conn) {
+        conn.query('INSERT INTO users SET ?', user, function(err, result) {
+
+        })
+    })
 });
 
 // Edit a product
