@@ -14,7 +14,7 @@ html(lang="en")
             form#editProductForm(action="/" method="PUT")
                 .form-group
                     label Product ID
-                    input.form-control#product_id(type="text" name="product_id" v-model="product_id")
+                    input.form-control#product_id(type="text" name="product_id" v-model="product_id" placeholder="Enter the Product ID Number that you need to Edit/Update")
                 .form-group
                     label Name
                     input.form-control#product_name(type="text" name="product_name" v-model="product_name")
