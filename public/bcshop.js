@@ -84,54 +84,54 @@
 
     }
 
-    function renderViewProduct(products1) {
-        products1.forEach(function(product1) {
-            // var idLabel = document.createElement('label');
-            // var idProduct = document.createElement('input');
-            // var nameLabel = document.createElement('label');
-            // var nameProduct = document.createElement('input');
-            // var descriptionLabel = document.createElement('label');
-            // var descriptionProduct = document.createElement('input');
-            // var priceLabel = document.createElement('label');
-            // var priceProduct = document.createElement('input');
-            // var quantityLabel = document.createElement('label');
-            // var quantityProduct = document.createElement('input');
-            // var categoryLabel = document.createElement('label');
-            // var categoryProduct = document.createElement('input');
-            // idLabel.textContent = "Product ID";
-            // idProduct.textContent = product1.product_id;
-            // nameLabel.textContent = "Name";
-            // nameProduct.textContent = product1.product_name;
-            // descriptionLabel.textContent = "Description";
-            // descriptionProduct.textContent = product1.product_description;
-            // priceLabel.textContent = "Price";
-            // priceProduct.textContent = product1.product_price;
-            // quantityLabel.textContent = "Quantity";
-            // quantityProduct.textContent = product1.product_quantity;
-            // categoryLabel.textContent = "Category";
-            // categoryProduct.textContent = product1.product_category;
+    // function renderViewProduct(products1) {
+    //     products1.forEach(function(product1) {
+    //         var idLabel = document.createElement('label');
+    //         var idProduct = document.createElement('input');
+    //         var nameLabel = document.createElement('label');
+    //         var nameProduct = document.createElement('input');
+    //         var descriptionLabel = document.createElement('label');
+    //         var descriptionProduct = document.createElement('input');
+    //         var priceLabel = document.createElement('label');
+    //         var priceProduct = document.createElement('input');
+    //         var quantityLabel = document.createElement('label');
+    //         var quantityProduct = document.createElement('input');
+    //         var categoryLabel = document.createElement('label');
+    //         var categoryProduct = document.createElement('input');
+    //         idLabel.textContent = "Product ID";
+    //         idProduct.textContent = product1.product_id;
+    //         nameLabel.textContent = "Name";
+    //         nameProduct.textContent = product1.product_name;
+    //         descriptionLabel.textContent = "Description";
+    //         descriptionProduct.textContent = product1.product_description;
+    //         priceLabel.textContent = "Price";
+    //         priceProduct.textContent = product1.product_price;
+    //         quantityLabel.textContent = "Quantity";
+    //         quantityProduct.textContent = product1.product_quantity;
+    //         categoryLabel.textContent = "Category";
+    //         categoryProduct.textContent = product1.product_category;
 
             
-            // var inputId = document.createElement('input');
-            // var inputName = document.createElement('input');
-            // var inputDescription = document.createElement('input');
-            // var inputPrice = document.createElement('input');
-            // var inputQuantity = document.createElement('input');
-            // var inputCategory = document.createElement('input');
-            // inputId.textContent = product.product_id;
-            // inputName.textContent = product.product_name;
-            // inputDescription.textContent = product.product_description;
-            // inputPrice.textContent = product.product_price;
-            // inputQuantity.textContent = product.product_quantity;
-            // inputCategory.textContent = product.product_category;
-            // input.append(inputId);
-            // input.append(tinputName);
-            // input.append(inputDescription);
-            // input.append(inputPrice);
-            // input.append(inputQuantity);
-            // input.append(inputCategory);
-            // products1.append(label);
+    //         var inputId = document.createElement('input');
+    //         var inputName = document.createElement('input');
+    //         var inputDescription = document.createElement('input');
+    //         var inputPrice = document.createElement('input');
+    //         var inputQuantity = document.createElement('input');
+    //         var inputCategory = document.createElement('input');
+    //         inputId.textContent = product.product_id;
+    //         inputName.textContent = product.product_name;
+    //         inputDescription.textContent = product.product_description;
+    //         inputPrice.textContent = product.product_price;
+    //         inputQuantity.textContent = product.product_quantity;
+    //         inputCategory.textContent = product.product_category;
+    //         input.append(inputId);
+    //         input.append(tinputName);
+    //         input.append(inputDescription);
+    //         input.append(inputPrice);
+    //         input.append(inputQuantity);
+    //         input.append(inputCategory);
+    //         products1.append(label);
 
-        });
-    }
+    //     });
+    // }
 })();
