@@ -8,8 +8,14 @@ const router = express.Router();
 //     res.send('hello world');
 // });
 
-router.get('/', function getIndexPage(req, res) {
+
+router.get('/', (req, res) => {
     res.render('index.pug');
 })
+
+router.get('/home', (req, res) => {
+    res.render('home.pug');
+})
+
 
 module.exports = router;

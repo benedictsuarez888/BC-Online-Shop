@@ -1,0 +1,75 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")        
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+    
+
+    
+  body
+   
+    main#bcshopVue(role="main" class="container")
+        .navbar.navbar-expand-md.navbar-light.bg-light.sticky-top.active
+            div.container-fluid
+                h3 Blockchain Cadets Online Shop
+                    button.navbar-toggler(type = "button" data-toggle="collapse" data-target="#navbarRes")
+                        span.navbar-toggler-icon
+
+                .collapse.navbar-collapse(id="navbarRes")
+                    ul.navbar-nav.ml-auto
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Home
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Categories
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Items
+                        li.nav-item.active
+                            input.form-control(type="text" placeholder="Search") 
+                        li.nav-item.active 
+                            a.nav-link.btn-outline-danger(type="button" href="/admin") Admin   
+        
+        .container-fluid.padding
+            .row.padding
+            .col-md-4
+                table.table.table-borderless#productsTable
+                    tr.card(v-for="product in products") 
+                        td
+                            img.card-img-top(src="/a1.jpg")
+                        .card-body.col-md-4
+                            td.card-title {{ product.product_name }} 
+                            td.card-text  {{ product.product_description }}
+                            td.card-text {{ product.product_price }}
+                            td.card-text {{ product.product_quantity }}
+                            td.card-text {{ product.product_category }}
+                            td
+                            
+                                button.btn-success(v-on:click="viewProduct(product)") Edit 
+                                button.btn-danger(v-on:click="deleteProduct(product)") Delete 
+                                       
+                                    
+                                
+                        
+                                
+                    
+                
+
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        script(src="/bcshop-vue.js")
+            
+
+            
+
+
+            
+
+            
