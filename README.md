@@ -17,3 +17,7 @@ MySQL Server
 9. Run this command "npm install --save body-parser express express-myconnection express-validator method-override morgan mysql path pug request". If you get an error, just install a package by 4 only using also the npm install.
 10. Run "node index.js" to your terminal.
 11. Go to your browser and go to "http://localhost:8000/".
+
+For more inquiries contact benedictsuarez888@gmail.com.
+
+Thank you.
