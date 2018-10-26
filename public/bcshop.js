@@ -57,6 +57,7 @@
             thead.append(td);
         });
         productsTable.append(thead);
+
         products.forEach(function(product) {
             
             var tr = document.createElement('tr');

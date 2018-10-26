@@ -1,0 +1,133 @@
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous")
+    link(rel="stylesheet" href="bootstrap.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+    
+
+    
+  body.bg-dark
+   
+    main#bcshopVue(role="main" class="container")
+        .navbar.navbar-expand-md.navbar-light.bg-warning.sticky-top.active
+            div.container-fluid
+                h3 Blockchain Cadets Online Shop
+                    button.navbar-toggler(type = "button" data-toggle="collapse" data-target="#navbarRes")
+                        span.navbar-toggler-icon
+
+                .collapse.navbar-collapse(id="navbarRes")
+                    ul.navbar-nav.ml-auto
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Home
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Categories
+                        li.nav-item.active
+                            a.nav-link.btn.outline.primary(href="/") Items
+                        li.nav-item.active
+                            input.form-control(type="text" placeholder="Search") 
+                          
+        
+        div.carousel.slide(id="slides" data-ride="carousel")
+            ol.carousel-indicators
+                li(data-target="#slides" data-slide-to="0")
+                li(data-target="#slides" data-slide-to="0")
+                li(data-target="#slides" data-slide-to="0")
+
+            .carousel-inner
+                .carousel-item.active
+                    img(src="bg2.jpg")
+                    .carousel-caption
+                        p.display-2 W E L C O M E
+                        p to
+                        p BC Online Shopping
+
+                .carousel-item
+                    img(src="bg1.jpg")
+
+                .carousel-item
+                    img(src="bg2.jpg")
+            
+            a.carousel-control-prev(href="#slides" role = "button" data-slide = "prev")
+                span.carousel-control-prev-icon
+                span.sr-only
+
+            a.carousel-control-next(href="#slides" role = "button" data-slide = "next")
+                span.carousel-control-next-icon
+                span.sr-only    
+                
+
+
+
+
+
+
+
+        .container-fluid.padding
+            .row.padding
+                .col-md-4
+                    table.table.table-borderless#productsTable
+                        tr.card(v-for="product in products") 
+                            td
+                                img.card-img-top(src="/a1.jpg")
+                            .card-body
+                                td.card-title {{ product.product_name }} 
+                                td.card-text  {{ product.product_description }}
+                                td.card-text P {{ product.product_price }}.00
+                                td.card-text {{ product.product_quantity }} left
+                                td.card-text {{ product.product_category }}
+                                td
+                                
+                                    button.btn-primary(type="button") Buy now 
+
+                .col-md-4
+                    table.table.table-borderless#productsTable
+                        tr.card(v-for="product in products") 
+                            td
+                                img.card-img-top(src="/a1.jpg")
+                            .card-body
+                                td.card-title {{ product.product_name }} 
+                                td.card-text  {{ product.product_description }}
+                                td.card-text P {{ product.product_price }}.00
+                                td.card-text {{ product.product_quantity }} left
+                                td.card-text {{ product.product_category }}
+                                td
+                                
+                                    button.btn-primary(type="button") Buy now 
+                .col-md-4
+                    table.table.table-borderless#productsTable
+                        tr.card(v-for="product in products") 
+                            td
+                                img.card-img-top(src="/a1.jpg")
+                            .card-body
+                                td.card-title {{ product.product_name }} 
+                                td.card-text  {{ product.product_description }}
+                                td.card-text P {{ product.product_price }}.00
+                                td.card-text {{ product.product_quantity }} left
+                                td.card-text {{ product.product_category }}
+                                td
+                                
+                                    button.btn-primary(type="button") Buy now                                         
+            
+                                 
+                
+
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+        script(src="/bcshop-vue.js")
+            
+
+            
+
+
+            
+
+            
