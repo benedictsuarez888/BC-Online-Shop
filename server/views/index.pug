@@ -49,7 +49,7 @@ html(lang="en")
                         td {{ product.product_quantity }}
                         td {{ product.product_category }}
                         td
-                            button(v-on:click="") Edit
+                            button(v-on:click="viewProduct(product)") Edit
                             button(v-on:click="deleteProduct(product)") Delete
         
         script(src="https://unpkg.com/axios/dist/axios.min.js")

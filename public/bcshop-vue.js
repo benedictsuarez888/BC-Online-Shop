@@ -9,6 +9,14 @@
             product_category: null,
             products: []
         },
+        data1: {
+            product_name: null,
+            product_description: null,
+            product_price: null,
+            product_quantity: null,
+            product_category: null,
+            products1: []
+        },
         created: function() {
             var self = this;
             axios.get('http://localhost:8000/api/products')
@@ -33,6 +41,7 @@
                     .then(function(res) {
                         self.products = res.data;
                         self.clear();
+                        // res.render('index.pug');
                     })
                     .catch(function(err) {
                     });
@@ -60,7 +69,49 @@
                     .catch(function(err){
 
                     });
+            },
+
+
+            viewProduct: function(product){
+                var self = this;
+                axios.get('api/products' + product.product_id)
+                    .then(function(res){
+                        var index = -1;
+                        for(var i = 0; i< self.products.length; i++){
+                            if(Number(self.product[i].product_id) === Number(product.product_id)){
+                                index = 1;
+                                break;
+                            }
+                        }
+                    })
+                    .catch(function(err){
+
+                    });
+
+
             }
+
+            // viewProduct: function(product) {
+            //     var self = this;
+            //     axios.get('/api/products/' + product.product_id)
+            //         .then(function(res) {
+            //             self.products1 = res.data1;
+            //         })
+            //         .catch(function(err) {
+            //             self.products1 = res.data1;
+            //         });
+            // }
+
+            // viewProduct: function(product) {
+            //     var self = this;
+            //     axios.get('/api/products/' + product.product_id)
+            //         .then(function(res) {
+            //             self.products = res.data;
+            //         })
+            //         .catch(function(err) {
+            //             self.products = res.data;
+            //         });
+            // }
         }
     });
     console.log(bcshopVue);

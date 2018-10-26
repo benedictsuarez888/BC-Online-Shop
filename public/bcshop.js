@@ -56,7 +56,7 @@
             thead.append(td);
         });
         productsTable.append(thead);
-        products.forEach(function(note) {
+        products.forEach(function(product) {
             var tr = document.createElement('tr');
             var tdId = document.createElement('td');
             var tdName = document.createElement('td');
