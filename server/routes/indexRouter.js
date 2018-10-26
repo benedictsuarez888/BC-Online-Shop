@@ -15,8 +15,7 @@ router.get('/', function getIndexPage(req, res) {
 router.get('/edit/:id', function(req, res) {
     // product_id = req.params.id;
     // res.render('editProduct.pug');
-    var i = 
-    res.render('editProduct.pug', {  });
+    res.render('editProduct.pug');
 })
 
 

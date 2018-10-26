@@ -111,25 +111,25 @@
             // categoryProduct.textContent = product1.product_category;
 
             
-            var inputId = document.createElement('input');
-            var inputName = document.createElement('input');
-            var inputDescription = document.createElement('input');
-            var inputPrice = document.createElement('input');
-            var inputQuantity = document.createElement('input');
-            var inputCategory = document.createElement('input');
-            inputId.textContent = product.product_id;
-            inputName.textContent = product.product_name;
-            inputDescription.textContent = product.product_description;
-            inputPrice.textContent = product.product_price;
-            inputQuantity.textContent = product.product_quantity;
-            inputCategory.textContent = product.product_category;
-            input.append(inputId);
-            input.append(tinputName);
-            input.append(inputDescription);
-            input.append(inputPrice);
-            input.append(inputQuantity);
-            input.append(inputCategory);
-            products1.append(label);
+            // var inputId = document.createElement('input');
+            // var inputName = document.createElement('input');
+            // var inputDescription = document.createElement('input');
+            // var inputPrice = document.createElement('input');
+            // var inputQuantity = document.createElement('input');
+            // var inputCategory = document.createElement('input');
+            // inputId.textContent = product.product_id;
+            // inputName.textContent = product.product_name;
+            // inputDescription.textContent = product.product_description;
+            // inputPrice.textContent = product.product_price;
+            // inputQuantity.textContent = product.product_quantity;
+            // inputCategory.textContent = product.product_category;
+            // input.append(inputId);
+            // input.append(tinputName);
+            // input.append(inputDescription);
+            // input.append(inputPrice);
+            // input.append(inputQuantity);
+            // input.append(inputCategory);
+            // products1.append(label);
 
         });
     }
