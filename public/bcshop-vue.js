@@ -27,6 +27,17 @@
                     self.products = [];
                 });
         },
+
+        created1: function() {
+            var self = this;
+            axios.get('http://localhost:8000/api/products/' + product1.product_id)
+                .then(function(res) {
+                    self.products1 = res.data1;
+                })
+                .catch(function(err) {
+                    self.products1 = [];
+                });
+        },
         methods: {
             addProduct: function() {
                 var self = this;
@@ -71,24 +82,34 @@
                     });
             },
 
+            // viewProduct: function(){
+            //     var self = this;
+            //     axios.get('api/products/' + product.product_id)
+            //         .then(function(res) {
+            //             self.products = res.data;
+            //         })
+            //         .catch(function(err) {
+            //             self.products = [];
+            //         });
+            // },
 
-            viewProduct: function(product){
+            editProduct: function() {
                 var self = this;
-                axios.get('api/products' + product.product_id)
-                    .then(function(res){
-                        var index = -1;
-                        for(var i = 0; i< self.products.length; i++){
-                            if(Number(self.product[i].product_id) === Number(product.product_id)){
-                                index = 1;
-                                break;
-                            }
-                        }
+                var payload = {
+                    product_id: self.product_id,
+                    product_name: self.product_name,
+                    product_description: self.product_description,
+                    product_price: self.product_price,
+                    product_quantity: self.product_quantity,
+                    product_category: self.product_category,
+                };
+                axios.put('/api/products/' + self.product_id, payload)
+                    .then(function(res) {
+                        self.products = res.data;
+                        self.clear();
                     })
-                    .catch(function(err){
-
+                    .catch(function(err) {
                     });
-
-
             }
 
             // viewProduct: function(product) {

@@ -10,7 +10,7 @@ html(lang="en")
 
     body
         main#bcshopVue(role="main" class="container")
-            h1#pageTitle BC Online Shop
+            h1#pageTitle BC Online Shop Inventory
             form#addProductForm(action="/" method="POST")
                 .form-group
                     label Name
@@ -29,7 +29,7 @@ html(lang="en")
                     input.form-control#product_category(type="text" name="product_category" v-model="product_category")
                 .form-group
                     button.btn.btn-primary(type="button" v-on:click="addProduct") Add Product
-                    button.btn#clearBtn(type="button" v-on:click="clear") Clear
+                    button.btn.btn-danger#clearBtn(type="button" v-on:click="clear") Clear
             
             section
                 table.table#productsTable
@@ -49,8 +49,9 @@ html(lang="en")
                         td {{ product.product_quantity }}
                         td {{ product.product_category }}
                         td
-                            button(v-on:click="viewProduct(product)") Edit
+                            a(:href="'/edit/' + product.product_id") Edit
                             button(v-on:click="deleteProduct(product)") Delete
+
         
         script(src="https://unpkg.com/axios/dist/axios.min.js")
         script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
