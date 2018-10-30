@@ -5,6 +5,9 @@ An Online Shop application made from Node.js.
 MySQL Server 
 "bconlineshop.sql" is the SQL File that we used in the application. The file is located in the root directory of the project.
 
+Update: 
+Removed the MySQL Integration changed with a Simple JSON Store.
+
 # How to Run the Application?
 1. Go to your Terminal or Command Prompt.
 2. Go to the specific folder where you want to save the project.
@@ -17,7 +20,5 @@ MySQL Server
 9. Run this command "npm install --save body-parser express express-myconnection express-validator method-override morgan mysql path pug request". If you get an error, just install a package by 4 only using also the npm install.
 10. Run "node index.js" to your terminal.
 11. Go to your browser and go to "http://localhost:8000/".
-
-For more inquiries contact benedictsuarez888@gmail.com.
 
 Thank you.
