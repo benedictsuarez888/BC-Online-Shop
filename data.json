@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "product_id": "1",
+        "product_name": "Samsung Galaxy S9",
+        "product_description": "Released 2018, March\\n163g, 8.5mm thickness\\nAndroid 8.0\\n64/128/256GB storage, microSD card slot",
+        "product_price": "40000",
+        "product_quantity": "50",
+        "product_category": "Smartphone"
+      },
+      {
+        "product_id": "2",
+        "product_name": "iPhone 7 Plus",
+        "product_description": "Released 2016, September\\n188g, 7.3mm thickness\\niOS 10.0.1, up to iOS 12\\n32/128/256GB storage, no card slot",
+        "product_price": "32000",
+        "product_quantity": "30",
+        "product_category": "Smartphone"
+      },
+      {
+        "product_id": "3",
+        "product_name": "Xiaomi Mi A1",
+        "product_description": "Released 2017, September\\n165g, 7.3mm thickness\\nAndroid 7.1.2\\n64GB storage, microSD card slot",
+        "product_price": "9000",
+        "product_quantity": "10",
+        "product_category": "Smartphone"
+      },
+      {
+        "product_id": "4",
+        "product_name": "Blackberry Priv",
+        "product_description": "Released 2015, November\\n192g, 9.4mm thickness\\nAndroid 5.1.1, up to 6.0.1\\n32GB storage, microSD card slot",
+        "product_price": "25000",
+        "product_quantity": "41",
+        "product_category": "Smartphone"
+      },
+      {
+        "product_id": "5",
+        "product_name": "BlackBerry KEY2",
+        "product_description": "Released 2018, June\\n168g, 8.5mm thickness\\nAndroid 8.1\\n64/128GB storage, microSD card slot",
+        "product_price": "21000",
+        "product_quantity": "3",
+        "product_category": "Smartphone"
+      },
+      {
+        "product_id": "6",
+        "product_name": "Apple iPhone XR",
+        "product_description": "Released 2018, October\\n194g, 8.3mm thickness\\niOS 12\\n64/128/256GB storage, no card slot",
+        "product_price": "40000",
+        "product_quantity": "60",
+        "product_category": "Smartphone"
+      }
+    ]
+  }
