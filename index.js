@@ -4,20 +4,20 @@ const morgan = require('morgan');
 const mysql = require('mysql');
 const myConnection = require('express-myconnection');
 const config = require('./config');
-const dbOptions = {
-  host:       config.database.host,
-  user:       config.database.user,
-  password:   config.database.password,
-  port:       config.database.port, 
-  database:   config.database.db
-}
+// const dbOptions = {
+//   host:       config.database.host,
+//   user:       config.database.user,
+//   password:   config.database.password,
+//   port:       config.database.port, 
+//   database:   config.database.db
+// }
 const bodyParser = require('body-parser');
 const path = require('path');
 const indexRouter = require('./server/routes/indexRouter');
 const productsRouter = require('./server/routes/productsRouter');
 const port = 8000;
 
-app.use(myConnection(mysql, dbOptions, 'pool'));
+// app.use(myConnection(mysql, dbOptions, 'pool'));
 
 app.use(morgan('dev'));
 

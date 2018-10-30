@@ -26,7 +26,7 @@ router.get('/', (req, res, next) => {
 
 // Pull the information of the specific product
 router.get('/:id', (req, res) => {
-    let products = {};
+    let product = {};
     const products = store.get('products');
     product = products.find(products => products.product_id === req.params.id);
     res.json(product);
@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const products = store.get('products');
     const newProduct = {
-        product_id: products.length > 0 ? notes[products.length - 1].id + 1 : 1,
+        product_id: products.length > 0 ? products[products.length - 1].product_id + 1 : 1,
         product_description: req.body.product_description,
         product_price: req.body.product_price,
         product_quantity: req.body.product_quantity,
@@ -60,7 +60,7 @@ router.post('/', (req, res) => {
     // }
 
     products.push(newProduct);
-    store.set('products', product);
+    store.set('products', products);
 
     // req.getConnection(function(error, conn) {
     //     conn.query('INSERT INTO products SET ?', product, function(err, result) {
